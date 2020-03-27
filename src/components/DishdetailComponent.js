@@ -35,7 +35,8 @@ class DishDetail extends Component {
                     <li key={comment.id}>
                         <p>{comment.comment}</p>
                         <p>
-                            -- {comment.author}{new Date(comment.date).toLocaleDateString("en-US", {
+                        -- {comment.author}{", "}
+                            {new Date(comment.date).toLocaleDateString("en-US", {
                             year: 'numeric',
                             month: 'long',
                             day: '2-digit'
