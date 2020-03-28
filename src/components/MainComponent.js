@@ -4,6 +4,7 @@ import Menu from './MenuComponent';
 import Contact from './ContactComponent';
 import DishDetail from './DishdetailComponent';
 import Header from './HeaderComponent';
+import About from './AboutComponent';
 import Footer from './FooterComponent';
 import { DISHES } from '../shared/dishes';
 import { COMMENTS } from '../shared/comments';
@@ -28,8 +29,7 @@ class Main extends Component {
             return (
                 <Home dish={this.state.dishes.filter((dish) => dish.featured)[0]} 
                 promotion={this.state.promotions.filter((promo) => promo.featured)[0]} 
-                leader={this.state.leaders.filter((leader) => leader.featured)[0]} 
-                />
+                leader={this.state.leaders.filter((leader) => leader.featured)[0]} />
             );
         }
 
@@ -48,6 +48,7 @@ class Main extends Component {
                     <Route exact path="/menu" component={() => <Menu dishes={this.state.dishes}/>} />
                     <Route path="/menu/:dishId" component={DishWithId} />
                     <Route exact path="/contactus" component={Contact} />
+                    <Route path="/aboutus" component={() => <About leader={this.state.leaders}/>} />
                     <Redirect to="/home" />
                 </Switch>
                 <Footer />
