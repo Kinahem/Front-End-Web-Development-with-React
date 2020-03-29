@@ -25,17 +25,17 @@ class Header extends Component {
         event.preventDefault();
     }
 
-      toggleNav() {
+    toggleNav() {
         this.setState({
-          isNavOpen: !this.state.isNavOpen
+            isNavOpen: !this.state.isNavOpen
         });
-      }
+    }
 
-      toggleModal() {
+    toggleModal() {
         this.setState({
-          isModalOpen: !this.state.isModalOpen
+            isModalOpen: !this.state.isModalOpen
         });
-      }
+    }
 
     render() {
         return(
